@@ -1,0 +1,61 @@
+{
+  "seq": 4,
+  "id": "r4-1793202950514",
+  "filename": "ollama-log_2026-10-28_21-25-50-514_shop-a-look.json",
+  "label": "shop-a-look",
+  "brief": "",
+  "started_local": "28/10/2026, 21:25:50",
+  "started_utc": "2026-10-28T15:55:50.514Z",
+  "timezone": "Asia/Calcutta",
+  "page_url": "http://localhost:8000/",
+  "endpoint": "/api/look",
+  "model": "(backend decides)",
+  "api": "native /api/chat",
+  "json_mode": true,
+  "num_ctx_requested": 32768,
+  "num_predict": 1200,
+  "catalogue_source": "real dataset",
+  "full_catalogue_sent": false,
+  "catalogue_skus": 1000,
+  "request_chars": 179,
+  "request_est_tokens": 86,
+  "has_image": false,
+  "request_body": {
+    "model": "(backend decides)",
+    "transport": "backend",
+    "messages": [
+      {
+        "role": "user",
+        "content": "[outfit photo 640x480 - sent once to the vision model; the image itself is not logged]"
+      }
+    ]
+  },
+  "status": "ok",
+  "http_status": 200,
+  "latency_ms": 2990,
+  "prompt_tokens": 1700,
+  "completion_tokens": 176,
+  "prompt_truncated": null,
+  "response_text": "{\"summary\":\"A person wearing a white graphic t-shirt with short sleeves and a round neck.\",\"items\":[{\"slot\":\"top\",\"label\":\"unisex white graphic round neck short sleeves cotton t-shirt\",\"article_type\":\"Tshirts\",\"colour\":\"white\",\"secondary_colour\":\"blue\",\"pattern\":\"graphic\",\"material\":null,\"worn_by\":\"unisex\",\"confidence\":0.95,\"source\":\"vision\",\"rgb\":null,\"details\":[\"round neck\",\"short sleeves\",\"graphic print\",\"cotton\"],\"description\":\"unisex white graphic round neck short sleeves cotton t-shirt\"}]}",
+  "response_raw": null,
+  "error": null,
+  "error_kind": null,
+  "skus_returned": null,
+  "skus_kept": null,
+  "skus_dropped": null,
+  "products_shown": 6,
+  "shown_ids": [
+    "myn-1967371",
+    "myn-13819100",
+    "myn-1293766",
+    "myn-1703259",
+    "myn-1018611",
+    "myn-1291961"
+  ],
+  "served_by_model": "gemini-3.5-flash-lite",
+  "provider": "backend",
+  "vision_cached": false,
+  "semantic_used": true,
+  "semantic_model": "gemini-embedding-001",
+  "_written": true
+}

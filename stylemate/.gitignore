@@ -1,0 +1,17 @@
+# Secrets - never commit. backend/env.template and backend/.env.example are
+# the committed copies, with the key left empty.
+.env
+**/.env
+*.key
+
+# Local environments and runtime data (rebuilt on every machine and host)
+.venv/
+**/.venv/
+__pycache__/
+*.pyc
+backend/var/
+logs/
+*.log
+
+# macOS
+.DS_Store

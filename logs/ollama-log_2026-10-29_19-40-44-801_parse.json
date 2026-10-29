@@ -1,0 +1,53 @@
+{
+  "seq": 1,
+  "id": "r1-1793283044801",
+  "filename": "ollama-log_2026-10-29_19-40-44-801_parse.json",
+  "label": "parse",
+  "brief": "I need a cargo pants",
+  "started_local": "29/10/2026, 19:40:44",
+  "started_utc": "2026-10-29T14:10:44.801Z",
+  "timezone": "Asia/Calcutta",
+  "page_url": "file:///Users/saket/Downloads/agentcicd2c/stylemate/frontend/StyleMate_frontend_v15_gemini_v9.html",
+  "endpoint": "http://localhost:11434/api/chat",
+  "model": "(backend decides)",
+  "api": "native /api/chat",
+  "json_mode": true,
+  "num_ctx_requested": 32768,
+  "num_predict": 1200,
+  "catalogue_source": "real dataset",
+  "full_catalogue_sent": false,
+  "catalogue_skus": 1000,
+  "request_chars": 4073,
+  "request_est_tokens": 1968,
+  "has_image": false,
+  "request_body": {
+    "model": "(backend decides)",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You read one sentence from a shopper on an Indian fashion store and turn it into search conditions. You never see the products; code does the searching. Your only job is to understand the sentence.\n\nSplit what they said into two kinds of thing:\n  HARD — stated requirements. A product breaking one of these is wrong and will be excluded. Category, article type, colour, audience, price limits.\n  SOFT — preferences, occasions, moods, styles. These only affect the order of results. \"comfortable\", \"stylish\", \"for a casual dinner\", \"something smart\".\n\nNever invent a hard constraint. If they did not say a price, max_price is null. If they did not name a category, categories is empty. A guessed constraint silently hides products they wanted; a missing one costs nothing, because soft preferences still rank the results.\n\nClassify the request:\n  \"precise\"      — names a kind of product, or a firm constraint. \"men’s t-shirts under 1200\", \"red saree\".\n  \"vague\"        — real intent, no firm constraint. \"something for a casual dinner\", \"something stylish\".\n  \"insufficient\" — no usable intent at all. \"hi\", \"show me stuff\", \"anything\".\n\nUse only values from the VOCABULARY given to you. Copy them exactly; never invent a category id, article type or colour.\n\nReply with ONE JSON object and nothing else:\n{\"query_type\":\"precise|vague|insufficient\",\"intent\":\"what they are asking for, in your words\",\"hard\":{\"categories\":[],\"articleTypes\":[],\"colours\":[],\"audience\":null,\"max_price\":null,\"min_price\":null},\"soft\":{\"keywords\":[],\"occasion\":null,\"styles\":[]},\"clarify\":\"one short question, ONLY if query_type is insufficient, else empty\",\"message\":\"one or two friendly sentences to the shopper\"}"
+      },
+      {
+        "role": "user",
+        "content": "SHOPPER SAID: \"I need a cargo pants\"\n\nVOCABULARY — the only values you may use:\ncategory ids: ethnic (Ethnic & occasion wear), western (Western wear), footwear (Footwear), accessories (Accessories), sports (Sports & activewear)\narticle types: Blazers, Dresses, Jackets, Jeans, Shirts, Shorts, Skirts, Sweatshirts, Tops, Trousers, Tshirts, Backpacks, Bangle, Belts, Bracelet, Caps, Earrings, Handbags, Necklace and Chains, Pendant, Ring, Smart Watches, Sunglasses, Watches, Boots, Casual Shoes, Flats, Flip Flops, Formal Shoes, Heels, Sandals, Ethnic Dresses, Kurta Sets, Kurtas, Kurtis, Lehenga Choli, Nehru Jackets, Sarees, Sports Sandals, Sports Shoes, Sports Tshirts, Track Pants, Tracksuits\ncolours: Olive, Black, Not specified, Green, Maroon, Cream, Yellow, Blue, Magenta, Lavender, Pink, Turquoise Blue, Peach, Beige, Multi, Navy Blue, White, Grey, Charcoal, Teal, Purple, Red, Gold, Grey Melange, Brown, Mustard, Off White, Sea Green, Burgundy, Mauve, Rust, Fluorescent Green, Orange, Coral, Silver, Tan, Rose Gold, Copper, Bronze, Coffee Brown, Sky Blue, Nude, Metallic, Lime Green, Wine\nusages: Formal, Casual, Party, Ethnic, Sports\naudiences: men, women, unisex\nprices run from 92 to 24995 rupees across 1000 products.\n\nWARDROBE (what they already own, for context only — never a hint about what they want):\n- Ultralyte Men Running T-shirt (Sports Tshirts, Black)\n- Men Pack of 2 Printed T-shirt (Tshirts, Not specified)\n- Printed Straight Kurta (Kurtas, Yellow)\n- Unisex Popcat 20 RES Sliders Flip-Flops (Flip Flops, White)\n- Unisex Storm Smart Watch (Smart Watches, Black)\n\nTHEIR SAVED COLOUR PALETTE: warm · medium depth\nColours that suit them, from the Colour Studio: Olive, Maroon, Cream, Yellow, Peach, Beige, Red, Gold, Brown, Mustard, Off White, Burgundy, Rust, Orange\nThis is a PREFERENCE, not a requirement. Prefer these colours when ordering results, and put any of them into soft.keywords if it helps. Never make a colour a hard constraint because of this list — only the shopper asking for a colour does that.\n\nTurn \"I need a cargo pants\" into the JSON object described above. Hard constraints only for what they actually said."
+      }
+    ],
+    "transport": "backend"
+  },
+  "status": "error",
+  "http_status": null,
+  "latency_ms": 9,
+  "prompt_tokens": null,
+  "completion_tokens": null,
+  "prompt_truncated": null,
+  "response_text": null,
+  "response_raw": null,
+  "error": "Could not reach the StyleMate backend at /api/llm/chat. Start it with: bash start_stylemate.command",
+  "error_kind": "no-backend",
+  "skus_returned": null,
+  "skus_kept": null,
+  "skus_dropped": null,
+  "products_shown": null,
+  "shown_ids": null,
+  "_written": true
+}

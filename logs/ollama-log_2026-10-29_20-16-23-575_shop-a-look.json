@@ -1,0 +1,61 @@
+{
+  "seq": 2,
+  "id": "r2-1793285183575",
+  "filename": "ollama-log_2026-10-29_20-16-23-575_shop-a-look.json",
+  "label": "shop-a-look",
+  "brief": "",
+  "started_local": "29/10/2026, 20:16:23",
+  "started_utc": "2026-10-29T14:46:23.575Z",
+  "timezone": "Asia/Calcutta",
+  "page_url": "http://localhost:8000/?page=v15geminiv11",
+  "endpoint": "/api/look",
+  "model": "(backend decides)",
+  "api": "native /api/chat",
+  "json_mode": true,
+  "num_ctx_requested": 32768,
+  "num_predict": 1200,
+  "catalogue_source": "real dataset",
+  "full_catalogue_sent": false,
+  "catalogue_skus": 1000,
+  "request_chars": 179,
+  "request_est_tokens": 86,
+  "has_image": false,
+  "request_body": {
+    "model": "(backend decides)",
+    "transport": "backend",
+    "messages": [
+      {
+        "role": "user",
+        "content": "[outfit photo 640x480 - sent once to the vision model; the image itself is not logged]"
+      }
+    ]
+  },
+  "status": "ok",
+  "http_status": 200,
+  "latency_ms": 4880,
+  "prompt_tokens": 1749,
+  "completion_tokens": 170,
+  "prompt_truncated": null,
+  "response_text": "{\"summary\":\"A woman wearing a casual blue graphic t-shirt.\",\"items\":[{\"slot\":\"top\",\"label\":\"womens blue graphic round neck short sleeves t-shirt\",\"article_type\":\"Tshirts\",\"colour\":\"blue\",\"secondary_colour\":null,\"pattern\":\"graphic\",\"material\":null,\"worn_by\":\"womenswear\",\"wearer\":\"women\",\"confidence\":0.95,\"source\":\"vision\",\"rgb\":null,\"details\":[\"round neck\",\"short sleeves\",\"graphic print\"],\"description\":\"womens blue graphic round neck short sleeves t-shirt\"}]}",
+  "response_raw": null,
+  "error": null,
+  "error_kind": null,
+  "skus_returned": null,
+  "skus_kept": null,
+  "skus_dropped": null,
+  "products_shown": 6,
+  "shown_ids": [
+    "myn-2372790",
+    "myn-12106248",
+    "myn-11711916",
+    "myn-11759448",
+    "myn-12541180",
+    "myn-14013748"
+  ],
+  "served_by_model": "gemini-3.5-flash-lite",
+  "provider": "backend",
+  "vision_cached": false,
+  "semantic_used": true,
+  "semantic_model": "gemini-embedding-001",
+  "_written": true
+}

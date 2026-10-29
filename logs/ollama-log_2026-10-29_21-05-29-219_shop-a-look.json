@@ -1,0 +1,61 @@
+{
+  "seq": 4,
+  "id": "r4-1793288129219",
+  "filename": "ollama-log_2026-10-29_21-05-29-219_shop-a-look.json",
+  "label": "shop-a-look",
+  "brief": "",
+  "started_local": "29/10/2026, 21:05:29",
+  "started_utc": "2026-10-29T15:35:29.219Z",
+  "timezone": "Asia/Calcutta",
+  "page_url": "http://localhost:8000/?page=v15geminiv12",
+  "endpoint": "/api/look",
+  "model": "(backend decides)",
+  "api": "native /api/chat",
+  "json_mode": true,
+  "num_ctx_requested": 32768,
+  "num_predict": 1200,
+  "catalogue_source": "real dataset",
+  "full_catalogue_sent": false,
+  "catalogue_skus": 1000,
+  "request_chars": 179,
+  "request_est_tokens": 86,
+  "has_image": false,
+  "request_body": {
+    "model": "(backend decides)",
+    "transport": "backend",
+    "messages": [
+      {
+        "role": "user",
+        "content": "[outfit photo 640x480 - sent once to the vision model; the image itself is not logged]"
+      }
+    ]
+  },
+  "status": "ok",
+  "http_status": 200,
+  "latency_ms": 4016,
+  "prompt_tokens": 1749,
+  "completion_tokens": 168,
+  "prompt_truncated": null,
+  "response_text": "{\"summary\":\"A man wearing a red polo shirt.\",\"items\":[{\"slot\":\"top\",\"label\":\"men red short sleeve polo shirt\",\"article_type\":\"Shirts\",\"colour\":\"red\",\"secondary_colour\":null,\"pattern\":\"solid\",\"material\":null,\"worn_by\":\"menswear\",\"wearer\":\"men\",\"confidence\":0.95,\"source\":\"vision\",\"rgb\":null,\"details\":[\"short sleeves\",\"collar\",\"button placket\",\"regular fit\"],\"description\":\"men red short sleeve polo shirt\"}]}",
+  "response_raw": null,
+  "error": null,
+  "error_kind": null,
+  "skus_returned": null,
+  "skus_kept": null,
+  "skus_dropped": null,
+  "products_shown": 6,
+  "shown_ids": [
+    "myn-13063598",
+    "myn-12374578",
+    "myn-18385502",
+    "myn-7472233",
+    "myn-11925912",
+    "myn-10999830"
+  ],
+  "served_by_model": "gemini-3.5-flash-lite",
+  "provider": "backend",
+  "vision_cached": false,
+  "semantic_used": true,
+  "semantic_model": "gemini-embedding-001",
+  "_written": true
+}

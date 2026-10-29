@@ -1,0 +1,53 @@
+{
+  "seq": 1,
+  "id": "r1-1793174730498",
+  "filename": "ollama-log_2026-10-28_13-35-30-498_parse.json",
+  "label": "parse",
+  "brief": "I want stylish jeans",
+  "started_local": "28/10/2026, 13:35:30",
+  "started_utc": "2026-10-28T08:05:30.498Z",
+  "timezone": "Asia/Calcutta",
+  "page_url": "file:///Users/saket/Downloads/agentcicd2c/stylemate/frontend/StyleMate_frontend_v15_gemini_v1.html",
+  "endpoint": "http://localhost:11434/api/chat",
+  "model": "(backend decides)",
+  "api": "native /api/chat",
+  "json_mode": true,
+  "num_ctx_requested": 32768,
+  "num_predict": 1200,
+  "catalogue_source": "real dataset",
+  "full_catalogue_sent": false,
+  "catalogue_skus": 997,
+  "request_chars": 4549,
+  "request_est_tokens": 2198,
+  "has_image": false,
+  "request_body": {
+    "model": "(backend decides)",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You read one sentence from a shopper on an Indian fashion store and turn it into search conditions. You never see the products; code does the searching. Your only job is to understand the sentence.\n\nSplit what they said into two kinds of thing:\n  HARD — stated requirements. A product breaking one of these is wrong and will be excluded. Category, article type, colour, audience, price limits.\n  SOFT — preferences, occasions, moods, styles. These only affect the order of results. \"comfortable\", \"stylish\", \"for a casual dinner\", \"something smart\".\n\nNever invent a hard constraint. If they did not say a price, max_price is null. If they did not name a category, categories is empty. A guessed constraint silently hides products they wanted; a missing one costs nothing, because soft preferences still rank the results.\n\nClassify the request:\n  \"precise\"      — names a kind of product, or a firm constraint. \"men’s t-shirts under 1200\", \"red saree\".\n  \"vague\"        — real intent, no firm constraint. \"something for a casual dinner\", \"something stylish\".\n  \"insufficient\" — no usable intent at all. \"hi\", \"show me stuff\", \"anything\".\n\nUse only values from the VOCABULARY given to you. Copy them exactly; never invent a category id, article type or colour.\n\nReply with ONE JSON object and nothing else:\n{\"query_type\":\"precise|vague|insufficient\",\"intent\":\"what they are asking for, in your words\",\"hard\":{\"categories\":[],\"articleTypes\":[],\"colours\":[],\"audience\":null,\"max_price\":null,\"min_price\":null},\"soft\":{\"keywords\":[],\"occasion\":null,\"styles\":[]},\"clarify\":\"one short question, ONLY if query_type is insufficient, else empty\",\"message\":\"one or two friendly sentences to the shopper\"}"
+      },
+      {
+        "role": "user",
+        "content": "SHOPPER SAID: \"I want stylish jeans\"\n\nVOCABULARY — the only values you may use:\ncategory ids: ethnic (Ethnic & occasion wear), western (Western wear), footwear (Footwear), beauty (Beauty & skincare), accessories (Accessories), sports (Sports & activewear)\narticle types: Shirts, Jeans, Watches, Track Pants, Tshirts, Socks, Casual Shoes, Belts, Flip Flops, Handbags, Tops, Bra, Sandals, Shoe Accessories, Sweatshirts, Deodorant, Formal Shoes, Bracelet, Lipstick, Flats, Kurtas, Waistcoat, Sports Shoes, Shorts, Briefs, Sarees, Perfume and Body Mist, Heels, Sunglasses, Innerwear Vests, Pendant, Laptop Bag, Scarves, Dresses, Night suits, Skirts, Wallets, Blazers, Ring, Kurta Sets, Clutches, Shrug, Backpacks, Caps, Trousers, Earrings, Camisoles, Boxers, Jewellery Set, Dupatta, Capris, Lip Gloss, Bath Robe, Mufflers, Tunics, Jackets, Trunk, Lounge Pants, Face Wash and Cleanser, Necklace and Chains, Duffel Bag, Sports Sandals, Foundation and Primer, Sweaters, Trolley Bag, Tracksuits, Swimwear, Shoe Laces, Fragrance Gift Set, Bangle, Nightdress, Ties, Baby Dolls, Leggings, Highlighter and Blush, Travel Accessory, Kurtis, Mobile Pouch, Messenger Bag, Lip Care, Nail Polish\ncolours: Navy Blue, Blue, Silver, Black, Grey, Green, Purple, White, Beige, Brown, Bronze, Teal, Copper, Pink, Off White, Maroon, Red, Khaki, Orange, Yellow, Charcoal, Gold, Steel, Tan, Multi, Magenta, Lavender, Sea Green, Cream, Peach, Olive, Skin, Burgundy, Coffee Brown, Grey Melange, Rust, Rose, Lime Green, Mauve, Turquoise Blue\nusages: Casual, Ethnic, Formal, Sports\naudiences: men, women, unisex\nprices run from 390 to 3000 rupees across 997 products.\n\nWARDROBE (what they already own, for context only — never a hint about what they want):\n- Fila Men's Round Neck Navy Blue T-shirt (Tshirts, Navy Blue)\n- Colorbar Soft Touch Show Stopper Copper Lipstick 037 (Lipstick, Brown)\n- Turtle Check Men Navy Blue Shirt (Shirts, Navy Blue)\n- W Women Printed Beige Kurta (Kurtas, Beige)\n- Fila Men Cush Flex Black Slippers (Flip Flops, Black)\n- Titan Women Silver Watch (Watches, Silver)\n\nTHEIR SAVED COLOUR PALETTE: warm · medium depth\nColours that suit them, from the Colour Studio: Maroon, Ivory, Mustard, Wine, Beige, Rust, Olive, Red, Tan, Peach, Cocoa, Nude, Gold-tone, Rose Gold\nThis is a PREFERENCE, not a requirement. Prefer these colours when ordering results, and put any of them into soft.keywords if it helps. Never make a colour a hard constraint because of this list — only the shopper asking for a colour does that.\n\nTurn \"I want stylish jeans\" into the JSON object described above. Hard constraints only for what they actually said."
+      }
+    ],
+    "transport": "backend"
+  },
+  "status": "error",
+  "http_status": null,
+  "latency_ms": 8,
+  "prompt_tokens": null,
+  "completion_tokens": null,
+  "prompt_truncated": null,
+  "response_text": null,
+  "response_raw": null,
+  "error": "Could not reach the StyleMate backend at /api/llm/chat. Start it with: bash start_stylemate.command",
+  "error_kind": "no-backend",
+  "skus_returned": null,
+  "skus_kept": null,
+  "skus_dropped": null,
+  "products_shown": null,
+  "shown_ids": null,
+  "_written": true
+}
